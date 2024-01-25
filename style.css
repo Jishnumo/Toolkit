@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+body{
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+span{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+#main{
+    position: relative;
+}
+#toolkti-content{
+    position: absolute;
+    left:50%;
+    top:0;
+    background-color: #000;
+    color: white;
+    transform: translateX(-50%);
+    padding:15px 10px;
+    border-radius: 7px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toolkti-content::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 15px solid;
+    border-color: #000 #0000 #0000 #0000;
+  }
+  
+  #main:hover #toolkti-content {
+    top: -210%;
+    visibility: visible;
+    opacity: 1;
+  }
